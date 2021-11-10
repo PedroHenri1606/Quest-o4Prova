@@ -72,7 +72,7 @@ public class UsuarioDAO {
 
     public void carregarMensagens(){
         try{
-            BufferedReader carregar = new BufferedReader(new FileReader("mensagens.txt"));
+            BufferedReader carregar = new BufferedReader(new FileReader("log.txt"));
             while(true){
                 String linha = carregar.readLine();
                 if (linha == null){
@@ -92,7 +92,7 @@ public class UsuarioDAO {
 
     public void salvarMensagens(){
         try{
-            BufferedWriter salvar = new BufferedWriter(new FileWriter("mensagens.txt"));
+            BufferedWriter salvar = new BufferedWriter(new FileWriter("log.txt"));
             for (int i = 0; i < usuarios.size(); i++){
                 salvar.write(usuarios.get(i).toString());
                 salvar.newLine();
